@@ -3,7 +3,8 @@ import express from "express";
 import {
     getUsers,
     getUserPosts,
-    addRemovePost
+    addRemovePost,
+    deletePost
 } from "../controllers/users.js";
 
 import { verifiedUser } from "../middleware/auth.js";
@@ -15,5 +16,8 @@ router.get("/:id/posts", verifiedUser, getUserPosts);
 
 /* Update */
 router.patch("/:id/:postId", verifiedUser, addRemovePost);
+
+/* Delete */
+router.delete("/:id/:postId", verifiedUser, deletePost);
 
 export default router

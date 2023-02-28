@@ -30,6 +30,10 @@ const UserSchema = new mongoose.Schema(
             type: String,
             default: "",
         },
+        posts:{
+            type: Array,
+            default: []
+        },
         likedPost:{
             type: Array,
             default: []
