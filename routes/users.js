@@ -14,6 +14,7 @@ const router = express.Router();
 router.get("/:id", verifiedUser, getUsers);
 router.get("/:id/posts", verifiedUser, getUserPosts);
 
+/* TODO: to be deleted  */
 /* Update */
 router.patch("/:id/:postId", verifiedUser, addRemovePost);
 

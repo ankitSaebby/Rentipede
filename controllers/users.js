@@ -41,7 +41,7 @@ export const addRemovePost = async (req, res) => {
         const { id, postId } = req.params;
         const user = await User.findById(id);
         
-        //TODO: o be fetched from Posts model
+        //TODO: to be fetched from Posts model
         const post = await Post.findById(postId);
 
         if(user.posts.includes(postId)){
